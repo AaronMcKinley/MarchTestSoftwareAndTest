@@ -19,7 +19,7 @@ public class Employee extends EmployeeList{
             this.name = name;
         }
         else{
-            throw new IllegalArgumentException("Employee Name is too short");
+            throw new IllegalArgumentException("Invalid Name length");
         }
     }
 
@@ -32,7 +32,7 @@ public class Employee extends EmployeeList{
             this.employeeNumber = employeeNumber;
         }
         else{
-            throw new IllegalArgumentException("Employee Number is too short");
+            throw new IllegalArgumentException("Employee Number should be 5 digits");
         }
     }
     public Employee(String name, int number){

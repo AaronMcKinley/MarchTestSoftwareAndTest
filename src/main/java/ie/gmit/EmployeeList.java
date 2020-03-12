@@ -17,6 +17,9 @@ public class EmployeeList {
             if(temp.getEmployeeNumber() != e.getEmployeeNumber()){
                 employees.add(e);
             }
+            else{
+                new IllegalArgumentException("Duplicate Employee Found, no object added");
+            }
         }
     }
     public void delEmployee(Employee e){
@@ -25,10 +28,13 @@ public class EmployeeList {
             if(temp.getEmployeeNumber() == e.getEmployeeNumber()){
                 employees.remove(e);
             }
+            else{
+                new IllegalArgumentException("No Matching Employee Found");
+            }
         }
     }
     public int getListSize(){
-        return employees.size();
+        return employees.size()+1;
     }
 
     public String getEmployeeListName(Employee e){
